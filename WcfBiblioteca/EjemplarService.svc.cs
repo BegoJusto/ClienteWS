@@ -13,7 +13,8 @@ namespace WcfBiblioteca {
         public void delete(int idEjemplar) {
             Ejemplar ejemplar = aS.getEjemplarById(idEjemplar);
             if (ejemplar != null) {
-                
+
+                parseEjemplar(ejemplar);
             }
         }
 
@@ -43,11 +44,11 @@ namespace WcfBiblioteca {
             return ejemplar;
         }
        
-        string IEjemplarService.create(WSEjemplar ejemplar) {
+        public string create(WSEjemplar ejemplar) {
             string resultado = "";           
             if (aS.getEjemplarById(ejemplar.Codigo) == null) {
-                Ejemplar aux = parseEjemplar(ejemplar);
-                aS.create(aux);
+               
+                aS.create(parseWSEjemplarToEjemplar(ejemplar));
                 resultado = "Ejemplar Creado";
             } else {
                 resultado = "No se ha podido crear el ejemplar";
@@ -56,7 +57,7 @@ namespace WcfBiblioteca {
             return resultado;
         }
 
-        private static Ejemplar parseEjemplar(WSEjemplar ejemplar) {
+        private static Ejemplar parseWSEjemplarToEjemplar(WSEjemplar ejemplar) {
             Ejemplar aux = new Ejemplar();
             aux.NumPaginas = ejemplar.NumPaginas;
             aux.ISBN = ejemplar.ISBN;
@@ -64,11 +65,11 @@ namespace WcfBiblioteca {
             return aux;
         }
 
-        string IEjemplarService.update(WSEjemplar ejemplar) {
-            string resultado = "";
-            EjemplarService aS = new EjemplarServiceImp();
-            if (aS.getEjemplarById(ejemplar.Codigo) == null) {
-                aS.update(ejemplar);
+        public string update(WSEjemplar ejemplar) {
+            string resultado = "";           
+            if (aS.getEjemplarById(ejemplar.Codigo) != null) {
+                aS.update(parseWSEjemplarToEjemplar(ejemplar));
+                resultado = "El ejemplar se ha actualizado";
             } else {
                 resultado = "No se ha actualizado el ejemplar";
             }
