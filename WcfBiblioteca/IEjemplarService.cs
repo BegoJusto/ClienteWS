@@ -28,7 +28,7 @@ namespace WcfBiblioteca {
         int numPaginas = 0;
         string isbn = "";
         string errorMessage = "";
-        Editorial editorial;        
+       // Editorial editorial;        
 
         [DataMember]
         public int Codigo {

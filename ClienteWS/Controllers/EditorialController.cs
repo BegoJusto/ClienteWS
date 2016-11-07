@@ -1,4 +1,6 @@
-﻿using Cl.BBLL;
+﻿using CapaLogica.BBLL;
+using CapaLogica.Models;
+
 
 using System;
 using System.Collections.Generic;
@@ -6,7 +8,7 @@ using System.Linq;
 using System.Web.Mvc;
 
 namespace ClienteWS.Controllers {
-    [Authorize(Roles = "Admin")]
+   
     public class EditorialController : Controller
     {
         private EditorialService eS;

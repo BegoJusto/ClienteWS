@@ -44,9 +44,7 @@ namespace CapaLogica.Models
                 _codEjemplar = value;
             }
         }
-        [Display(Name = "ISBN", ResourceType = typeof(MyResources.EjemplarResources))]
-        [Required(ErrorMessageResourceType = typeof(MyResources.EjemplarResources),
-            ErrorMessageResourceName = "ISBNrequerido")]
+      
         public string ISBN
         {
             get
@@ -59,9 +57,7 @@ namespace CapaLogica.Models
                 _iSBN = value;
             }
         }
-        [Display(Name = "Numeropaginas", ResourceType = typeof(MyResources.EjemplarResources))]
-        [Required(ErrorMessageResourceType = typeof(MyResources.EjemplarResources),
-            ErrorMessageResourceName = "Numeropaginasrequerido")]
+      
         public int NumPaginas
         {
             get
@@ -74,9 +70,7 @@ namespace CapaLogica.Models
                 _numPaginas = value;
             }
         }
-        [Display(Name = "FPublicacion", ResourceType = typeof(MyResources.EjemplarResources))]
-        [Required(ErrorMessageResourceType = typeof(MyResources.EjemplarResources),
-            ErrorMessageResourceName = "FPublicacionrequerido")]
+        
         public DateTime FPublicacion
         {
             get
@@ -103,17 +97,6 @@ namespace CapaLogica.Models
             }
         }
 
-        public IList<Prestamos> Prestamos
-        {
-            get
-            {
-                return _prestamos;
-            }
-
-            set
-            {
-                _prestamos = value;
-            }
-        }
+       
     }
 }

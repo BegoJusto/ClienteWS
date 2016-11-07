@@ -1,45 +1,45 @@
-﻿@model IList<CapaLogica.Models.Editorial>
+﻿
+@model IList<GestionBibliotecaMVC.Models.Autor>
 @{
-    ViewBag.Title = "Listado de Editoriales";
+    ViewBag.Title = "Listado de Autores";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
+
 <section>
     <br />
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 ">
                 <h3>Nombre:</h3>
             </div>
         </div>
-    </div>
-    <br />
-    @foreach (var item in Model) {
-        <div class="container-fluid">
-            <div class="row">
+        <br />
+        @foreach (var items in Model) {
+            <div class="row ">
                 <div class="col-lg-4">
-                    @item.Nombre
+                    @items.Nombre
                 </div>
                 <div class="col-lg-8">
                     @Html.ActionLink("Editar", "createUpdate", new {
-                   codEditorial = @item.CodEditorial
+                   codigo = @items.CodAutor
                }, htmlAttributes: new {
                    @class = "btn btn-warning"
                })
                     @Html.ActionLink("Borrar", "delete", new {
-                   codEditorial = @item.CodEditorial
+                   codigo = @items.CodAutor
                }, htmlAttributes: new {
                    @class = "btn btn-danger"
                })
                 </div>
             </div>
-        </div>
         <br />
-    }
+        }
+    </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6  pull-left">
+            <div class="col-lg-7">
                 @Html.ActionLink("Crear", "createUpdate", null, new {
-               @class = "btn btn-success"
+               @class = "btn btn-success pull-left"
            })
             </div>
         </div>

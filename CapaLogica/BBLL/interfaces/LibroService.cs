@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogica.BBLL.interfaces
 {
-    interface LibroService
+    public interface LibroService
     {
         Libro getById(int codigoLibro);
 

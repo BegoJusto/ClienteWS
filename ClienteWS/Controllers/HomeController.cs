@@ -1,9 +1,10 @@
-﻿using MyResources;
+﻿using CapaLogica.BBLL;
+using CapaLogica.BBLL.interfaces;
+using CapaLogica.Models;
+using MyResources;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using ClienteWS.BBLL.interfaces;
-using ClienteWS.BBLL;
-using ClienteWS.Models;
+
 
 namespace ClienteWS.Controllers {
     [AllowAnonymous]

@@ -1,12 +1,12 @@
-﻿using Cl.BBLL;
-using Cl.BBLL.interfaces;
-using Cl.Models;
+﻿using CapaLogica.BBLL;
+using CapaLogica.BBLL.interfaces;
+using CapaLogica.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
 namespace ClienteWS.Controllers {
-    [Authorize(Roles = "Admin")]
+
     public class AutorController : Controller
     {
         private AutorService autorService; 

@@ -15,8 +15,7 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                @if (Request.IsAuthenticated) {
-                    if (User.IsInRole("Admin")) {
+               
                 <!--Primer parametro, lo que vemos. Segundo parametro, que metodo llamamos. Tercer parametro, que controlador llamamos-->
                 <li>@Html.ActionLink("Autores ", "Index", "Autor")</li>
                 <li>@Html.ActionLink("Libros ", "Index", "Libro")</li>
@@ -24,35 +23,11 @@
                 <li>@Html.ActionLink("Prestamos ", "Index", "Prestamo")</li>
                 <li>@Html.ActionLink("Usuarios", "Index", "Usuario")</li>
                 <li>@Html.ActionLink("Ejemplares", "Index", "Ejemplar")</li>
-                    }
-                }
+                   
                 <li>@Html.ActionLink("Acerca de ", "About", "Home")</li>
             </ul>
 
-            @if (!Request.IsAuthenticated) {
 
-                using (Html.BeginForm("Index", "Login", FormMethod.Post, new {
-                    @class = "navbar-form navbar-right"
-                })) {
-                    @Html.ValidationSummary(true)
-                                
-                    <a href="" >Hola </a>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                }
-
-            } else {
-
-                //Usuario user = ((Usuario)Session["usuario"]);
-                System.Diagnostics.Debug.Write("He llegado al form de logout");
-                using (Html.BeginForm("logout", "Login", FormMethod.Post, new {
-                    @class = "navbar-form navbar-right"
-                })) {
-                    @Html.ValidationSummary(true)
-                    
-                    <button type="submit" class="btn btn-primary">Logout</button>
-                }
-
-            }
 
         </div>
     </div>

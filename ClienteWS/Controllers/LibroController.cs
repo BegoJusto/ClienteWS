@@ -1,11 +1,13 @@
 ﻿
-using ClienteWS.BBLL.interfaces;
+using CapaLogica.BBLL;
+using CapaLogica.BBLL.interfaces;
+using CapaLogica.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
 namespace ClienteWS.Controllers {
-    [Authorize(Roles = "Admin")]
+   
     public class LibroController : Controller
     {
         private LibroService ls;

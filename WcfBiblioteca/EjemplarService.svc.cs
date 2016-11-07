@@ -14,12 +14,21 @@ namespace WcfBiblioteca {
             Ejemplar ejemplar = aS.getEjemplarById(idEjemplar);
             if (ejemplar != null) {
 
-                parseEjemplar(ejemplar);
+                aS.delete(idEjemplar);
             }
         }
 
         public IList<WSEjemplar> getAll() {
-            throw new NotImplementedException();
+            IList<Ejemplar> listaEjemplares = aS.getAll();
+            IList<WSEjemplar> listaWSEjemplares = new List<WSEjemplar>();
+            WSEjemplar wsEjemplar = new WSEjemplar();
+            foreach (var ejemplar in listaEjemplares){
+                ejemplar.CodEjemplar = wsEjemplar.Codigo;
+                ejemplar.ISBN = wsEjemplar.ISBN;
+                ejemplar.NumPaginas = wsEjemplar.NumPaginas;
+                listaWSEjemplares.Add(wsEjemplar);
+            }                        
+            return listaWSEjemplares;
         }
 
         

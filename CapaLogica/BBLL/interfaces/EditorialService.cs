@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogica.BBLL
 {
-    interface EditorialService
+    public interface EditorialService
     {
         Editorial getById(int codigoEditorial);
 

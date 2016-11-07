@@ -124,54 +124,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BBLL\AutorServiceImp.cs" />
-    <Compile Include="BBLL\EditorialServiceImp.cs" />
-    <Compile Include="BBLL\EjemplarServiceImp.cs" />
-    <Compile Include="BBLL\FotoServiceImp.cs" />
-    <Compile Include="BBLL\interfaces\AutorService.cs" />
-    <Compile Include="BBLL\interfaces\EditorialService.cs" />
-    <Compile Include="BBLL\interfaces\EjemplarService.cs" />
-    <Compile Include="BBLL\interfaces\FotoService.cs" />
-    <Compile Include="BBLL\interfaces\LibroService.cs" />
-    <Compile Include="BBLL\interfaces\PrestamosService.cs" />
-    <Compile Include="BBLL\interfaces\UsuarioService.cs" />
-    <Compile Include="BBLL\LibroServiceImp.cs" />
-    <Compile Include="BBLL\PrestamosServiceImp.cs" />
-    <Compile Include="BBLL\UsuarioServiceImp.cs" />
     <Compile Include="Controllers\AutorController.cs" />
     <Compile Include="Controllers\EditorialController.cs" />
     <Compile Include="Controllers\EjemplarController.cs" />
-    <Compile Include="Controllers\FotoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibroController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\PrestamoController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
-    <Compile Include="DAL\AutorRepositoryImp.cs" />
-    <Compile Include="DAL\EditorialRepositoryImp.cs" />
-    <Compile Include="DAL\EjemplarRepositoryImp.cs" />
-    <Compile Include="DAL\FotoRepositoryImp.cs" />
-    <Compile Include="DAL\interfaces\AutorRepository.cs" />
-    <Compile Include="DAL\interfaces\EditorialRepository.cs" />
-    <Compile Include="DAL\interfaces\EjemplarRepository.cs" />
-    <Compile Include="DAL\interfaces\FotoRepository.cs" />
-    <Compile Include="DAL\interfaces\LibroRespository.cs" />
-    <Compile Include="DAL\interfaces\PrestamosRepository.cs" />
-    <Compile Include="DAL\interfaces\UsuarioRepository.cs" />
-    <Compile Include="DAL\LibroRepositoryImp.cs" />
-    <Compile Include="DAL\PrestamosRepositoryImp.cs" />
-    <Compile Include="DAL\UsuarioRepositoryImp.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Autor.cs" />
-    <Compile Include="Models\Editorial.cs" />
-    <Compile Include="Models\Ejemplar.cs" />
-    <Compile Include="Models\Foto.cs" />
-    <Compile Include="Models\Libro.cs" />
-    <Compile Include="Models\Login.cs" />
-    <Compile Include="Models\Prestamos.cs" />
-    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -191,17 +151,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Libro\Index.cshtml" />
     <Content Include="Views\Libro\Libro.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Login\MenuConLogin.cshtml" />
-    <Content Include="Views\Login\Recordar.cshtml" />
-    <Content Include="Views\Login\Registrar.cshtml" />
     <Content Include="Views\Prestamo\Index.cshtml" />
     <Content Include="Views\Prestamo\Prestamo.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\Shared\_MenuPartialwithLogin.cshtml" />
-    <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\Usuario\Usuario.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
